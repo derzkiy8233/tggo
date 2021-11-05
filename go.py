@@ -17,7 +17,7 @@ def ghoul_spam_handler(client, message):
     i = 100 
     while i > 0:
         try:
-            client.send_message(message.chat.id, f'Only {i-1}for end! (Это спам детка)')
+            client.send_message(message.chat.id, f'Еще {i-1} сообщений до конца (Это спам детка)')
         except FloodWait as e:
             sleep(e.x)
 
@@ -46,4 +46,4 @@ def ghoul_table_handler(client, message):
         client.send_message(message.chat.id, end_message)
 
 
-client.run()
+client.run() 
