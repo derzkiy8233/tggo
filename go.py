@@ -14,10 +14,10 @@ print('Готово! Напиши в тг "Spam" ')
 
 @client.on_message(filters.regex('spam|Spam|SPAM') & filters.me)
 def ghoul_spam_handler(client, message):
-    i = 10 
+    i = 1000 
     while i > 0:
         try:
-            client.send_message(message.chat.id, f'Еще {i-1} сообщений до конца spam (Это спам детка)')
+            client.send_message(message.chat.id, f'Осталось {i-1} сообщений до конца (Это спам детка)')
         except FloodWait as e:
             sleep(e.x)
 
